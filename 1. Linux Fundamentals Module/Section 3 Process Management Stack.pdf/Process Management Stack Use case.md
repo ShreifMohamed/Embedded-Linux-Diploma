@@ -18,7 +18,7 @@ ulimit -c unlimited
   * We can use `$ top` command.
     
 
-    ![process.png](Section%203%20Process%20Management%20Stack.pdf/process.png)
+    ![process](./process.png)
 )
 *  We can use also `$ ps -C process -o %cpu` 
 	 * `-C` : This select the processes whose executable name is given in.
