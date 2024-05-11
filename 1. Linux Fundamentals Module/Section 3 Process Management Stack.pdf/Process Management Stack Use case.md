@@ -18,7 +18,8 @@ ulimit -c unlimited
   * We can use `$ top` command.
     
 
-    ![[process]](1. Linux Fundamentals Module/Section 3 Process Management Stack.pdf/process.png)
+    ![process](1.%20Linux%20Fundamentals%20Module/Section%203%20Process%20Management%20Stack.pdf/process.png)
+)
 *  We can use also `$ ps -C process -o %cpu` 
 	 * `-C` : This select the processes whose executable name is given in.
 	 * `-o %cpu`: Specifies the output format to display only the CPU.
