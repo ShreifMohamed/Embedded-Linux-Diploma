@@ -32,7 +32,11 @@ kill -ABRT <PID>
 ```
 * After run this command we show 
 
+<<<<<<< HEAD:1. Linux Fundamentals Module/Section 3 Process Management Stack/Process Management Stack Use case.md
 	![after-kill](./after kill.png)
+=======
+	![after kill](./after kill.png)
+>>>>>>> 438a0be5a202a8980c25e4265e8add3d0ed5115c:1. Linux Fundamentals Module/Section 3 Process Management Stack.pdf/Process Management Stack Use case.md
 * And we get the core-dump file `core.process.5584.1715422295`
 
 	![core-dump](./core-dump.png)
@@ -40,4 +44,8 @@ kill -ABRT <PID>
 ```bash
 gdb ./process core.process.5584.1715422295
 ```	
+<<<<<<< HEAD:1. Linux Fundamentals Module/Section 3 Process Management Stack/Process Management Stack Use case.md
   ![gdb-3](./gdb 3.png)
+=======
+  ![gdb 3](./gdb 3.png)
+>>>>>>> 438a0be5a202a8980c25e4265e8add3d0ed5115c:1. Linux Fundamentals Module/Section 3 Process Management Stack.pdf/Process Management Stack Use case.md
