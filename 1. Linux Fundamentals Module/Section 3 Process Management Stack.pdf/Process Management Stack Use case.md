@@ -1,4 +1,4 @@
-
+# Process Management Stack: Use case
 ---
  **1- We use this commands:**
 ``` bash
@@ -16,6 +16,8 @@ ulimit -c unlimited
 ---
 **2- Lets Go with the first task to check the CPU load for the file system, after running the      process software.**
   * We can use `$ top` command.
+    
+
     ![[process.png]]
 *  We can use also `$ ps -C process -o %cpu` 
 	 * `-C` : This select the processes whose executable name is given in.
