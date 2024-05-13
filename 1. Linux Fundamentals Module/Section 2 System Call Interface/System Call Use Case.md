@@ -2,7 +2,7 @@
 
 ### Time Measurement:
 
->>**Measure the execution time for each command to assess their performance.
+>> Measure the execution time for each command to assess their performance.
 
 ``` bash
    I will use $time {command}
@@ -16,7 +16,7 @@
 ```
 ### Syscall Time Breakdown:
 
->>**Break down the total execution time of each command into time per
+>> Break down the total execution time of each command into time per
 	  system call to understand their resource consumption.
 
 ``` bash
@@ -24,7 +24,7 @@
 ```
 ### Performance Evaluation:
 
->>**Analyze the results to determine which command performs better than the
+>> Analyze the results to determine which command performs better than the
     other based on execution time, system interaction, and syscall breakdown.
 
 # ls vs. find
