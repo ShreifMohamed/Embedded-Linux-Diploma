@@ -9,7 +9,7 @@
 ```
 ### System Interaction Identification:
 
->>**Identify which system stack (e.g., file system, network) each command
+>> Identify which system stack (e.g., file system, network) each command
 	  interacts with during execution.
 ``` bash
   I will use $ strace -c -e trace={stack} {command}
