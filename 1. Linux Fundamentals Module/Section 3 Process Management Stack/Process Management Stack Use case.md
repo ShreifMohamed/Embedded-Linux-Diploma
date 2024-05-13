@@ -31,7 +31,7 @@ ulimit -c unlimited
 kill -ABRT <PID>
 ```
 * After run this command we show 
-    ![after-kill](Images/fter-kill.png)
+    ![after-kill](Images/after-kill.png)
 * And we get the core-dump file `core.process.5584.1715422295`
 
 	![core-dump](Images/core-dump.png)
