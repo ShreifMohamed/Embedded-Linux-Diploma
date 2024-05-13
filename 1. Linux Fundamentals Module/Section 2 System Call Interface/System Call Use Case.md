@@ -4,14 +4,14 @@
 
 >>**Measure the execution time for each command to assess their performance.
 
-   ``` bash
+``` bash
    I will use $time {command}
 ```
 ### System Interaction Identification:
 
 >>**Identify which system stack (e.g., file system, network) each command
 	  interacts with during execution.
-  ``` bash
+``` bash
   I will use $ strace -c -e trace={stack} {command}
 ```
 ### Syscall Time Breakdown:
@@ -19,7 +19,7 @@
 >>**Break down the total execution time of each command into time per
 	  system call to understand their resource consumption.
 
-  ``` bash
+``` bash
   I will use $ strace -c {command}
 ```
 ### Performance Evaluation:
@@ -28,7 +28,7 @@
     other based on execution time, system interaction, and syscall breakdown.
 
 # ls vs. find
- 
+ ![time-ls](Images/time-ls.png)
 # cp vs. rsync
 
 # diff vs. cmp
