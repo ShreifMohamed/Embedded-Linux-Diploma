@@ -29,13 +29,30 @@
 
 # ls vs. find
  ![time-ls](Images/time-ls.png)
+ ![trace-ls](Images/trace-ls.png)
+ ![trace-find](Images/trace-find.png)
+ 
 # cp vs. rsync
-
+ ![time-cp](Images/time-cp.png)
+ ![trace-cp](Images/trace-cp.png)
+ ![trace-rsync](Images/trace-rsync.png)
+ 
 # diff vs. cmp
-
+ ![time-cmp](Images/time-cmp.png)
+ ![trace-diff](Images/trace-diff.png)
+ ![trace-cmp](Images/trace-cmp.png)
+ 
 # sort vs. uniq
-
+ ![time-sort](Images/time-sort.png)
+ ![time-uniq](Images/time-uniq.png)
+ ![trace-sort](Images/trace-sort.png)
+ ![trace-uniq](Images/trace-uniq.png)
+ 
 # grep vs. sed
+
+ ![time-grep](Images/time-grep.png)
+ ![trace-grep](Images/trace-grep.png)
+ ![trace-sed](Images/trace-sed.png)
 
 
 | Command       | Time       | No.of Stacks | Time break down | Performance |
