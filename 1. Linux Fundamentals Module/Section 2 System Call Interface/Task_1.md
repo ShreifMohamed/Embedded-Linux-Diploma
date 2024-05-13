@@ -28,6 +28,6 @@ From $ strace -c {{command}}
 ```
 > -T:  `Show the time spent in system calls.`
 
- ![trace-T-ps](Images/trace-ps.png)
- ![trace-T-cd](Images/trace-cd.png)
- ![trace-T-ls](Images/trace-ls.png)
+ ![trace-T-ps](Images/trace-T-ps.png)
+ ![trace-T-cd](Images/trace-T-cd.png)
+ ![trace-T-ls](Images/trace-T-ls.png)
