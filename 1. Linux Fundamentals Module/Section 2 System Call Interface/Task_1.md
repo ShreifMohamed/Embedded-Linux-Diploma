@@ -6,7 +6,7 @@ use $ strace -c {{command}}
    -c: `Count time, calls, and errors for each system call and report a summary on   program exit.`
 
  ![trace-ps](Images/trace-ps.png)
- ![trace-cd](Images/trace-cd.png)
+ ![cd-trace](Images/cd-trace.png)
  ![trace-ls](Images/trace-ls.png)
  
 ## Second: extract files of interactions. Identify all the system        calls that have been used.
