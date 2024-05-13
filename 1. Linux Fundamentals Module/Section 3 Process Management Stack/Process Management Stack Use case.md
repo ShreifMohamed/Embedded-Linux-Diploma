@@ -18,12 +18,12 @@ ulimit -c unlimited
   * We can use `$ top` command.
     
 
-    ![process](Image/process.png)
+    ![process](Images/process.png)
 *  We can use also `$ ps -C process -o %cpu` 
 	 * `-C` : This select the processes whose executable name is given in.
 	 * `-o %cpu`: Specifies the output format to display only the CPU.
 	
-    ![ps](Image/ps.png)
+    ![ps](Images/ps.png)
 ---
 **3- The second Task: is extract core-dump file for this process.**
 * To get the core-dump file we should use the `$ kill` command with the signal `SIGABRT` as it requests controlled termination with core-dump file.
@@ -31,12 +31,12 @@ ulimit -c unlimited
 kill -ABRT <PID>
 ```
 * After run this command we show 
-    ![after-kill](Imagea/fter-kill.png)
+    ![after-kill](Images/fter-kill.png)
 * And we get the core-dump file `core.process.5584.1715422295`
 
-	![core-dump](Image/core-dump.png)
+	![core-dump](Images/core-dump.png)
 * Lets debug the core-dump file by using 
 ```bash
 gdb ./process core.process.5584.1715422295
 ```	
-  ![gdb-3](Image/gdb-3.png)
+  ![gdb-3](Images/gdb-3.png)
