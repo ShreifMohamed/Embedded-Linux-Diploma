@@ -31,27 +31,27 @@
 ```bash
 	$ echo "Hello World" > rootHard.txt
 ```
-	![[Hardlink.png]]
+	![Hardlink](Images/Hardlink.png)
 * **5- Copy content of secHard.txt file.**
-	![[cat.png]]
+	![cat](Images/cat.png)
 * **6- Remove secHard.txt File.**
 ```bash
 	$ rm -r secHard.txt
 ```
 * **7- Link rootHard.txt hard link with secHard2.txt.**
-	```bash
+```bash
 	$ ln rootHard.txt secHard2.txt
 ```
 * **8- Move rootHard.txt to another directory.**
-	```bash
+```bash
 	$ mv rootHard.txt /Desktop/link2
 ```
 * **9- Fill rootHard.txt with Hello World.**
-	```bash
+```bash
 	$ echo "Hello World" > rootHard.txt
 ```
 * **10- Copy content of secHard2.txt File.**
-	![[Hardlink2.png]]
+	![Hardlink2](Images/Hardlink2.png)
 ## Moreover you’re requested to create a file called rootSoft.txt then link this file symbolic link with another file called secSoft.txt:
 * **1- Create a directory for links .**
 ```bash
@@ -62,7 +62,7 @@
 	$ touch rootSoft.txt
 ```
 * **3- Link the rootHard.txt to another fill called secHard.txt using Hard link.**
-	```bash
+```bash
 	$ ln -s rootSoft.txt secSoft.txt
 ```
 	`Soft link` : Symbolic links are interpreted at run time as if the contents of the link had been substituted into the path being followed to find a file or directory. 
@@ -70,27 +70,27 @@
 ```bash
 	$ echo "Hello World" > rootSoft.txt
 ```
-	![[Softlink.png]]
+	![Softlink](Images/Softlink.png)
 * **5- Copy content of secSoft.txt file.**
-	![[catsoft.png]]
+	![catsoft](Images/catsoft.png)
 * **6- Remove secSoft.txt File.**
 ```bash
 	$ rm -r secSoft.txt
 ```
 * **7- Link rootSoft.txt hard link with secSoft2.txt.**
-	```bash
+```bash
 	$ ln  -s rootSoft.txt secSoft2.txt
 ```
 * **8- Move rootHard.txt to another directory.**
-	```bash
+```bash
 	$ mv rootSoft.txt /Desktop/link2
 ```
 * **9- Fill rootSoft.txt with Hello World.**
-	```bash
+```bash
 	$ echo "Hello World" > rootSoft.txt
 ```
 * **10- Copy content of secSoft2.txt File.**
-	![[Softlink2.png]]
+	![Softlink2](Images/Softlink2.png)
 ## Hardlink VS Softlink:
-	![[SoftvsHard.jpg]]
-	![[SoftvsHard2.jpg]]
+	![SoftvsHard](Images/SoftvsHard.jpg)
+	![SoftvsHard2](Images/SoftvsHard2.jpg)
