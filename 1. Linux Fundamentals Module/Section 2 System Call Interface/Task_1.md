@@ -4,6 +4,11 @@ use $ strace -c {{command}}
 ```
 >strace: `trace system calls and signals
    -c: `Count time, calls, and errors for each system call and report a summary on   program exit.`
+
+ ![trace-ps](Images/trace-ps.png)
+ ![cd-trace](Images/cd-trace.png)
+ ![trace-ls](Images/trace-ls.png)
+ 
 ## Second: extract files of interactions. Identify all the system        calls that have been used.
 ```bash
 From $ strace -c {{command}}
@@ -16,8 +21,13 @@ From $ strace -c {{command}}
 | **13) brk**            | **14)munmap**     | **15) lseek**       | **16) ioctl**    | **17) arch_prctl** | **18) access** |
 | **19)set_robust_list** | **20)getdents64** | **21)prlimit64**    | **22)getrandom** | **23)geteuid**     | **24) futex**  |
 | **25)set_tid_address** | **26) rseq**      | **27) statfs**      |                  |                    |                |
+
 ## Third: Measure system calls performance in terms of time.
   ```bash
   Use $ strace -T {{Command}}
 ```
-> -T:  `Show the time spent in system calls.` 
+> -T:  `Show the time spent in system calls.`
+
+ ![trace-T-ps](Images/trace-T-ps.png)
+ ![trace-T-cd](Images/trace-T-cd.png)
+ ![trace-T-ls](Images/trace-T-ls.png)
