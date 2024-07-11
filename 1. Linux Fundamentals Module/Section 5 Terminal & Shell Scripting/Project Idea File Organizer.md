@@ -1,3 +1,4 @@
+Project Idea: File Organizer
 ----
 **The goal of this project is to create a Bash script that organizes files in a specified directory based on their file types into separate subdirectories. This can be useful to keep your directories clean and tidy by automatically sorting files into appropriate categories.**
 ## Features:
@@ -107,6 +108,6 @@ echo "Files have been organized."
 tree "$DIR_PATH"
 ```
 ## Before run script:
-![[befor run script.png]]
+![befor-run-script](Images/befor-run-script.png)
 ## After run script:
-![[after run script 1.png]]
+![after-run-script](Images/after-run-script.png)
