@@ -47,11 +47,11 @@ The Bash script should output a summary report containing identified patterns an
 
 ----------------------------------
 
-#### ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ Expected Input:
+#### 🗒️ 🗒️ 🗒️ 🗒️ Expected Input:
 
 Suppose you have a Wireshark pcap file named network_traffic.pcap containing a mix of HTTP and HTTPS traffic.
 
-#### ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ Expected Output:
+#### 🗒️ 🗒️ 🗒️ 🗒️ Expected Output:
 
 ```txt
 ----- Network Traffic Analysis Report -----
@@ -73,11 +73,11 @@ Suppose you have a Wireshark pcap file named network_traffic.pcap containing a m
 ----- End of Report -----
 
 ```
-#### ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ My Input:
+#### 🗒️ 🗒️ 🗒️ 🗒️ My Input:
 
 ```shell
 $ ./analyze_traffic.sh ./my_caputer_file.pcapng
 ```
-#### ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ My Output:
+#### 🗒️ 🗒️ 🗒️ 🗒️ My Output:
 
 ![input](Images/input.png)
