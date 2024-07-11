@@ -51,7 +51,7 @@ The Bash script should output a summary report containing identified patterns an
 
 Suppose you have a Wireshark pcap file named network_traffic.pcap containing a mix of HTTP and HTTPS traffic.
 
-#### ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸Expected Output:
+#### ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ Expected Output:
 
 ```txt
 ----- Network Traffic Analysis Report -----
@@ -78,6 +78,6 @@ Suppose you have a Wireshark pcap file named network_traffic.pcap containing a m
 ```shell
 $ ./analyze_traffic.sh ./my_caputer_file.pcapng
 ```
-#### ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸My Output:
+#### ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ ðŸ—’ï¸ My Output:
 
 ![input](Images/input.png)
