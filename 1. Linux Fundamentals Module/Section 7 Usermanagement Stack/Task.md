@@ -8,7 +8,7 @@
 * Try accessing the file from the original and the different user accounts to observe the access permissions in action.
 
 ![f1.png](Images/f1.png)
-![[f2.1.png](Images/f2.1.png)
+![f2.1.png](Images/f2.1.png)
 ![f2.2.png](Images/f2.2.png)
 ### Exercise 2: User and Group Management
 * Create a new user named user1.
