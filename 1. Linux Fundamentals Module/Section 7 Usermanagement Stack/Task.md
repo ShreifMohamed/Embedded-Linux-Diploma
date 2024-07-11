@@ -9,7 +9,7 @@
 
 ![f1.png](Images/f1.png)
 ![[f2.1.png](Images/f2.1.png)
-![[f2.2.png]](Images/f2.2.png)
+![f2.2.png](Images/f2.2.png)
 ### Exercise 2: User and Group Management
 * Create a new user named user1.
 * Create a new group named group1.
@@ -20,5 +20,5 @@
 
 ![adduser](Images/adduser.png)
 ![f2](Images/f2.png)
-![[f2.1.png](Images/f2.1.png)
-![[f2.2.png]](Images/f2.2.png)
+![f2.1.png](Images/f2.1.png)
+![f2.2.png](Images/f2.2.png)
