@@ -11,95 +11,135 @@ Project Idea: File Organizer
 ```bash
 #!/bin/bash
  
+declare DIRPATH=$1  # Global variable that carry the directory path taken from the user
 
-## Function to create a directory if it doesn't exist
+# Function to get the extention of the file to know its type
+function GetExtention () {
+    
+    declare  FILEPATH=$1
+    declare  EXTENTION
+    
+    EXTENTION="${FILEPATH#*.}"
+    echo "$EXTENTION"   # Return the extention value
 
-create_directory()
+}
+#---------------------------------------------------------------------------------------------------------------------------------#
+# Function that take the text file and move it to the txt subdirectory
+function Move2txt () {
+   
+    declare  FILE=$1
+    declare  SUBDIR="$DIRPATH/txt"
 
-{
+# Create the directory if it is not exist only
+if ! [ -d "${SUBDIR}" ]; then   
 
-    if [ ! -d "$1" ]; then
-
-        mkdir -p "$1" # Create specific directories and their [p]arents if needed.
-
-    fi
-
-}  
-
-# Check if the user provided a directory path
-
-if [ -z "$1" ]; then
-
-    echo "Usage: $0 <directory-path>"
-
-    exit 1
-
+    mkdir  "${SUBDIR}"
 fi
 
-# Get the directory path from the argument
+mv "${FILE}" "${SUBDIR}"   # Move the file.txt to the txt subdirecyory
 
-DIR_PATH="$1"
-  
+}
+#---------------------------------------------------------------------------------------------------------------------------------#
+# Function that take the images and move it to the jpg subdirectory
+function Move2jpg () {
+   
+    declare  FILE=$1
+    declare  SUBDIR="$DIRPATH/jpg"
 
-# Check if the provided path is a directory
-
-if [ ! -d "$DIR_PATH" ]; then
-
-    echo "Error: $DIR_PATH is not a directory"
-
-    exit 1
-
+# Create the directory if it is not exist only
+if ! [ -d "${SUBDIR}" ]; then   
+    mkdir "${SUBDIR}"
 fi
 
-# Change to the specified directory
+mv "${FILE}" "${SUBDIR}"   # Move the file.txt to the txt subdirecyory
+}
+#---------------------------------------------------------------------------------------------------------------------------------#
+# Function that take the PDF files and move it to the pdf subdirectory
+function Move2pdf () {
+   
+    declare  FILE=$1
+    declare  SUBDIR="$DIRPATH/pdf"
 
-cd "$DIR_PATH"
+# Create the directory if it is not exist only
+if ! [ -d "${SUBDIR}" ]; then   
+    mkdir "${SUBDIR}"
+fi
 
-# Loop through all the files in the directory
+mv "${FILE}" "${SUBDIR}"   # Move the file.txt to the txt subdirecyory
+}
+#---------------------------------------------------------------------------------------------------------------------------------#
+# Function that take the any other files like (hidden files, no extention and unknown extention) and move it to the misc subdirectory
+function Move2misc () {
+   
+    declare  FILE=$1
+    declare  SUBDIR="$DIRPATH/misc"
 
-for file in *; do
+# Create the directory if it is not exist only
+if ! [ -d "${SUBDIR}" ]; then   
+    mkdir "${SUBDIR}"
+fi
 
-    # Skip directories
+mv "${FILE}" "${SUBDIR}"   # Move the file.txt to the txt subdirecyory
+}
+##################################################################################################################################
 
-    if [ -d "$file" ]; then
 
-        continue
+############################################## 3. Main function (Script logic) ###################################################
+function main () {
+    
+    DIRPATH=$1
+    declare  EXTENTION
+   
+    # Check if the user write a correct directory path or not
+    if  ! [ -d "${DIRPATH}" ]; then   
+        echo "Error: This directory not exist"
+        exit 1  # Terminate a programe with falier status 
+    fi
 
-    fi
+    
+    # Iterrate over the required directory 
+    for file in "${DIRPATH}"/*; do
+        
+        # Check the extention of each file inside this directory and organize it
+        if [[ -f "${file}" ]]; then 
 
-    # Get the file extension
 
-    extension="${file##*.}"  
+            EXTENTION=$(GetExtention "${file}") 
 
-    # Check if the file has no extension or is hidden (starts with a dot)
+            case "${EXTENTION}" in
+                txt)
+                    
+                    echo "${file} is moved to txt subdirectory"
+                    Move2txt "${file}"
+                ;;
+                jpg)
+                    echo "${file} is moved to jpg subdirectory"
+                    Move2jpg "${file}"
+                ;;
+                pdf)
+                    echo "${file} is moved to pdf subdirectory"
+                    Move2pdf "${file}"
+                ;;
+                *)
+                    echo "${file} is moved to misc subdirectory"
+                    Move2misc "${file}"
+                ;;
+            esac   
+        fi
+    done
 
-    if [[ "$file" == .* || "$file" == *.* ]]; then
+    # Itterate over the hidden files found in the required directory 
+    for file in "${DIRPATH}"/.*; do
+        if [ -f "${file}" ]; then
+            echo "Hidden file ${file} is moved to misc subdirectory"
+            Move2misc "${file}"
+        fi
+    done
+}
 
-        if [ "$file" == "$extension" ]; then
+####################################### 4. Calling main function with its arguments ######################################## 
 
-            # File has no extension
-
-            extension="misc"
-
-        fi
-
-    else
-
-        # File has an extension
-
-        extension=$(echo "$extension" | tr '[:upper:]' '[:lower:]')
-
-    fi
-
-    # create the subdirectory if it doesn't exist
-
-    create_directory "$extension"
-
-    # Move the file to the appropriate subdirectory
-
-    mv "$file" "$extension/"
-
-done
+main "${DIRPATH}"
 
 echo "Files have been organized."
 
